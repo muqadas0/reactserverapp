@@ -1,0 +1,25 @@
+name: Push-to-server
+
+on: push
+
+jobs:
+  deploy:
+    name: Push to server
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Serve React app
+        run: pm2 restart all
