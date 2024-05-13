@@ -5,7 +5,7 @@ on: push
 jobs:
   deploy:
     name: Push to server 
-    runs-on: self-hosted
+    runs-on: self-hosted 
 
     steps:
       - name: Checkout the code
