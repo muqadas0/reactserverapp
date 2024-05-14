@@ -12,6 +12,7 @@ function App() {
         <p> Its a new line </p>
         <p> hi hi hi </p>
         <p>wonderful world </p>
+        <p>deploy app through amplifier</p>
         <a
           className="App-link"
           href="https://reactjs.org"
